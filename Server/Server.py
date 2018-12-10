@@ -7,7 +7,10 @@ import time
 bind_ip = socket.gethostname()
 bind_port = 8089
 
-cnxn = pyodbc.connect()
+cnxn = pyodbc.connect(""
+                      ""
+                      ""
+                      "")
 server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 server.bind((bind_ip, bind_port))
 server.listen(5)  # max backlog of connections
@@ -330,7 +333,7 @@ def handle_client_connection(client_socket,address):
       break
      check = False
   except:
-    print("Client terminate connection!!!")
+    print("Client terminated connection!!!")
     for i in listClient :
       if i.socket == client_socket :
         n = i.name
