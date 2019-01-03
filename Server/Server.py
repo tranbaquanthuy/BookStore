@@ -7,10 +7,10 @@ import time
 bind_ip = socket.gethostname()
 bind_port = 8089
 
-cnxn = pyodbc.connect(""
-                      ""
-                      ""
-                      "")
+cnxn = pyodbc.connect("Driver={ODBC Driver 13 for SQL Server};"
+                      "Server=localhost;"
+                      "Database=QuanLyNhaSach;"
+                      "Trusted_Connection=yes;")
 server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 server.bind((bind_ip, bind_port))
 server.listen(5)  # max backlog of connections
